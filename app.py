@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from reg_linear import regressao_linear
 app = Flask(__name__)
 
+CORS(app)
 
 # Endpoint da API para prever
 @app.route('/api/predict', methods=['POST'])
